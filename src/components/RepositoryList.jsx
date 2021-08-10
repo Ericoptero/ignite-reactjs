@@ -12,18 +12,14 @@ export function RepositoryList() {
             .then(data => setRepositories(data));
     }, [])
 
-    console.log(repositories);
-
-    const repository = {
-        name: 'Unform'
-    }
-
     return (
         <section className="repository-list">
             <h1>Lista de Repositórios</h1>
 
             <ul>
-                {repositories.map(repository => <RepositoryItem key={repository.name} repository={repository} />)}
+                {repositories.map(repository => 
+                    <RepositoryItem key={repository.name} repository={repository} />
+                )}
             </ul>
         </section>
     );
