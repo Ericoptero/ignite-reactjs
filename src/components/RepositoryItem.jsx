@@ -1,10 +1,10 @@
-export function RepositoryItem(props) {
+export function RepositoryItem({repository}) {
     return (
         <li>
-            <strong>{props.repository?.name ?? 'Default'}</strong>
-            <p>Forms in React</p>
+            <strong>{repository.name}</strong>
+            <p>{repository.description}</p>
 
-            <a href="#" target="_blank">Acessar repositório</a>
+            <a href={repository.html_link} target="_blank">Acessar repositório</a>
         </li>
     );
 }
