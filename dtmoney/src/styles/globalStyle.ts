@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import { darken } from "polished";
 
 export const GlobalStyle = createGlobalStyle`
   :root {
@@ -13,6 +14,9 @@ export const GlobalStyle = createGlobalStyle`
     
     --input-border: #d7d7d7;
     --input-background: #e7e9ee;
+
+    --hovered-input-border: ${darken(0.1, '#d7d7d7')};
+    
     --background: #f0f2f5;
     --shape: #ffffff;
   }
