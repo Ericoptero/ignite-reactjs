@@ -2,10 +2,11 @@ import { useState } from 'react';
 import { createServer, Model } from 'miragejs';
 import { setAppElement } from 'react-modal';
 
+import { TransactionsProvider } from './TransactionsContext';
+
 import { Dashboard } from './components/Dashboard';
 import { Header } from './components/Header';
 import { NewTransactionModal } from './components/NewTransactionModal';
-import { TransactionContext } from './TransactionsContext';
 
 import { GlobalStyle } from './styles/globalStyle';
 
@@ -67,7 +68,7 @@ export function App() {
   }
 
   return (
-    <TransactionContext.Provider value={[]}>
+    <TransactionsProvider>
       <Header onOpenNewTransactionModal={handleOpenNewTransactionModal} />
 
       <Dashboard />
@@ -78,6 +79,6 @@ export function App() {
       />
 
       <GlobalStyle />
-    </TransactionContext.Provider>
+    </TransactionsProvider>
   );
 }
