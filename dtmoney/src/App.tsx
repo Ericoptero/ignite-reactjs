@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { createServer } from 'miragejs';
+import { createServer, Model } from 'miragejs';
 import { setAppElement } from 'react-modal';
 
 import { Dashboard } from './components/Dashboard';
@@ -10,20 +10,21 @@ import { GlobalStyle } from './styles/globalStyle';
 
 
 createServer({
+  models: {
+    transaction: Model,
+  },
+
   routes() {
     this.namespace = 'api';
 
     this.get('/transactions', () => {
-      return [
-        {
-          id: 1,
-          title: 'Transaction 1',
-          amount: 400,
-          type: 'deposit',
-          category: 'Food',
-          createdAt: new Date()
-        }
-      ]
+      return this.schema.all('transaction');
+    })
+
+    this.post('/transactions', (schema, request) => {
+      const data = JSON.parse(request.requestBody);
+
+      return schema.create('transaction', data);
     })
   }
 })
