@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { createServer, Model } from 'miragejs';
 import { setAppElement } from 'react-modal';
 
-import { TransactionsProvider } from './TransactionsContext';
+import { TransactionsProvider } from './hooks/useTransactions';
 
 import { Dashboard } from './components/Dashboard';
 import { Header } from './components/Header';
