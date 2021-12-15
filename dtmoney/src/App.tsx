@@ -1,9 +1,10 @@
 import { useState } from 'react';
 import { createServer } from 'miragejs';
-import Modal, { setAppElement } from 'react-modal';
+import { setAppElement } from 'react-modal';
 
 import { Dashboard } from './components/Dashboard';
 import { Header } from './components/Header';
+import { NewTransactionModal } from './components/NewTransactionModal';
 
 import { GlobalStyle } from './styles/globalStyle';
 
@@ -46,12 +47,10 @@ export function App() {
 
       <Dashboard />
 
-      <Modal 
+      <NewTransactionModal
         isOpen={isNewTransactionModalOpen}
         onRequestClose={handleCloseNewTransactionModal}
-      >
-        <h2>Teste</h2>
-      </Modal>
+      />
 
       <GlobalStyle />
     </>
