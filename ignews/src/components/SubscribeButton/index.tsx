@@ -5,6 +5,10 @@ interface SubscribeButtonProps {
 }
 
 export function SubscribeButton({ priceId }: SubscribeButtonProps) {
+  function handleSubscribe() {
+
+  }
+
   return (
     <button
       type="button"
