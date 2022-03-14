@@ -47,9 +47,6 @@ export default async function (request: NextApiRequest, response: NextApiRespons
       customerId = stripeCustomer.id;
     }
     
-
-    
-
     const stripeCheckoutSession = await stripe.checkout.sessions.create({
       customer: customerId,
       payment_method_types: ['card'],
