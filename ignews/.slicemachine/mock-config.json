@@ -8,5 +8,13 @@
         }
       }
     }
+  },
+  "slices": {
+    "Posts": {
+      "default": {
+        "primary": {}
+      }
+    },
+    "MySlice": {}
   }
 }

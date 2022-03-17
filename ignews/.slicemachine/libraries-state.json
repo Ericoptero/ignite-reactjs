@@ -1,5 +1,131 @@
 {
   "slices": {
-    "components": {}
+    "components": {
+      "my_slice": {
+        "library": "slices",
+        "id": "my_slice",
+        "name": "MySlice",
+        "description": "MySlice",
+        "model": {
+          "id": "my_slice",
+          "type": "SharedSlice",
+          "name": "MySlice",
+          "description": "MySlice",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "MySlice",
+              "primary": {
+                "title": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "heading1",
+                    "label": "Title",
+                    "placeholder": "This is where it all begins..."
+                  }
+                },
+                "description": {
+                  "type": "StructuredText",
+                  "config": {
+                    "single": "paragraph",
+                    "label": "Description",
+                    "placeholder": "A nice description of your feature"
+                  }
+                }
+              }
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "name": "Default",
+            "slice_type": "my_slice",
+            "items": [],
+            "primary": {
+              "title": [
+                {
+                  "type": "heading1",
+                  "text": "Drive B2C supply-chains",
+                  "spans": []
+                }
+              ],
+              "description": [
+                {
+                  "type": "paragraph",
+                  "text": "Laborum minim do anim aliqua consectetur fugiat sunt non cillum sit aliqua est sunt enim. Elit officia cillum culpa nulla laboris magna cupidatat sit nulla.",
+                  "spans": []
+                }
+              ]
+            }
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "isDirectory": true,
+          "extension": "js"
+        },
+        "screenshotPaths": {}
+      },
+      "posts": {
+        "library": "slices",
+        "id": "posts",
+        "name": "Posts",
+        "description": "Posts",
+        "model": {
+          "id": "posts",
+          "type": "SharedSlice",
+          "name": "Posts",
+          "description": "Posts",
+          "variations": [
+            {
+              "id": "default",
+              "name": "Default",
+              "docURL": "...",
+              "version": "sktwi1xtmkfgx8626",
+              "description": "Posts",
+              "primary": {
+                "": {
+                  "config": {
+                    "label": "",
+                    "placeholder": "",
+                    "allowTargetBlank": true,
+                    "single": "paragraph,preformatted,heading1,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+                  },
+                  "type": "StructuredText"
+                }
+              },
+              "items": {}
+            }
+          ]
+        },
+        "mocks": {
+          "default": {
+            "variation": "default",
+            "name": "Default",
+            "slice_type": "posts",
+            "items": [],
+            "primary": {
+              "": [
+                {
+                  "type": "paragraph",
+                  "text": "Mollit dolor aliqua sunt consequat voluptate elit do pariatur quis.",
+                  "spans": []
+                }
+              ]
+            }
+          }
+        },
+        "meta": {
+          "fileName": "index",
+          "isDirectory": true,
+          "extension": "js"
+        },
+        "screenshotPaths": {}
+      }
+    }
   }
 }
