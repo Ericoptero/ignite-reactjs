@@ -1,6 +1,5 @@
 import { GetStaticProps } from 'next';
 import Head from 'next/head';
-import { asText } from '@prismicio/helpers';
  
 import { createClient } from '../../services/prismicio';
 
